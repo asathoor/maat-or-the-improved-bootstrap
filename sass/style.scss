@@ -1,0 +1,122 @@
+/*!
+Theme Name: MAAT - or the Improved Bootstrap
+Theme URI: http://github.com/asathoor
+Author: petj
+Author URI: http://multimusen.dk
+Description: testing bootstrap menu - skeleton theme
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: tribal
+Text Domain: petj_f16_bootstrap
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/* prepare */
+//@import "compass/reset";
+
+$left: 15px;
+
+@import url(https://fonts.googleapis.com/css?family=Courgette);
+
+//@import "bourbon";
+
+@mixin sandGradient {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f6e6b4+0,ed9017+100;Yellow+3D+%231 */
+	background: #f6e6b4; /* Old browsers */
+	background: -moz-linear-gradient(top,  #f6e6b4 0%, #ed9017 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #f6e6b4 0%,#ed9017 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #f6e6b4 0%,#ed9017 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6e6b4', endColorstr='#ed9017',GradientType=0 ); /* IE6-9 */
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin blue-shade(){
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f2f5f6+0,e3eaed+37,c8d7dc+100;Grey+3D+%234 */
+	background: #f2f5f6; /* Old browsers */
+	background: -moz-linear-gradient(top,  #f2f5f6 0%, #e3eaed 37%, #c8d7dc 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #f2f5f6 0%,#e3eaed 37%,#c8d7dc 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #f2f5f6 0%,#e3eaed 37%,#c8d7dc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f5f6', endColorstr='#c8d7dc',GradientType=0 ); /* IE6-9 */
+
+}
+
+body {
+	@include sandGradient;
+}
+
+header {
+	height: 115px;
+	
+	h1 {
+		font-family: 'Courgette', cursive;
+		position: relative;
+		left: $left;
+	}
+	h2 {
+		font-famly: sans-serif;
+		font-size: small;	
+		position: relative;
+		left: $left;
+		top: -20px;
+	}
+}
+
+h1 #logo {
+	a {
+		color: #fff;	
+	}
+}
+#logoImg{
+	position: relative;
+	float: left;
+}
+
+footer {
+	color: #fff;
+	background-color: #000;
+	padding: 2em;
+	font-size: x-small;
+	@include border-radius(12px);
+}
+
+/* Responsive Header */
+@media screen and (max-width: 360px) {
+    header {
+        h2 {
+				display: none;        
+        }
+    }
+}
+
+/* articles */
+$bg: #fff;
+
+.container {
+	background-color: $bg;
+	@include border-radius(12px);
+}
+
+
+aside, article {
+	background-color: $bg;
+	@include border-radius(12px);
+}
+
+aside {
+	@include border-radius(5px);
+	//@include blue-shade();
+}
+
+html {
+	//position: relative;
+	//top: -50px;
+}

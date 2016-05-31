@@ -1,0 +1,95 @@
+/*!
+Theme Name: MAAT - or the Improved Bootstrap
+Theme URI: http://github.com/asathoor
+Author: petj
+Author URI: http://multimusen.dk
+Description: testing bootstrap menu - skeleton theme
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: tribal
+Text Domain: petj_f16_bootstrap
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+/* prepare */
+@import url(https://fonts.googleapis.com/css?family=Courgette);
+/* line 52, sass/style.scss */
+body {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f6e6b4+0,ed9017+100;Yellow+3D+%231 */
+  background: #f6e6b4;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #f6e6b4 0%, #ed9017 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #f6e6b4 0%, #ed9017 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #f6e6b4 0%, #ed9017 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6e6b4', endColorstr='#ed9017',GradientType=0 );
+  /* IE6-9 */ }
+
+/* line 56, sass/style.scss */
+header {
+  height: 115px; }
+  /* line 59, sass/style.scss */
+  header h1 {
+    font-family: 'Courgette', cursive;
+    position: relative;
+    left: 15px; }
+  /* line 64, sass/style.scss */
+  header h2 {
+    font-famly: sans-serif;
+    font-size: small;
+    position: relative;
+    left: 15px;
+    top: -20px; }
+
+/* line 74, sass/style.scss */
+h1 #logo a {
+  color: #fff; }
+
+/* line 78, sass/style.scss */
+#logoImg {
+  position: relative;
+  float: left; }
+
+/* line 83, sass/style.scss */
+footer {
+  color: #fff;
+  background-color: #000;
+  padding: 2em;
+  font-size: x-small;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  border-radius: 12px; }
+
+/* Responsive Header */
+@media screen and (max-width: 360px) {
+  /* line 94, sass/style.scss */
+  header h2 {
+    display: none; } }
+/* articles */
+/* line 103, sass/style.scss */
+.container {
+  background-color: #fff;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  border-radius: 12px; }
+
+/* line 109, sass/style.scss */
+aside, article {
+  background-color: #fff;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  border-radius: 12px; }
+
+/* line 114, sass/style.scss */
+aside {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px; }

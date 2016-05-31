@@ -1,0 +1,25 @@
+{
+  "name": "maat_theme",
+  "authors": [
+    "asathoor <per@multimusen.dk>"
+  ],
+  "description": "the maat bootpress and bower theme",
+  "main": "maat_bower.json",
+  "keywords": [
+    "maat",
+    "bower",
+    "wordpress",
+    "bootstrap",
+    "sass"
+  ],
+  "license": "GPLv3",
+  "homepage": "http://multimusen.dk",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
