@@ -12,5 +12,9 @@
 <!-- menu -->
 <script src="<?php bloginfo('stylesheet_directory'); ?>/js/menu.js"></script>
 
+
+
+<?php wp_footer(); ?>
+
 </body>
 </html>
