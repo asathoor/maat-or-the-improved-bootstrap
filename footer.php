@@ -8,5 +8,13 @@
 
 <?php wp_footer(); ?>
 
+<script>
+// hide sticky
+$(".sticky").click(function(){
+    $(".sticky").hide(1000);
+});
+console.log( "Jquery up and running!");
+</script>
+
 </body>
 </html>
