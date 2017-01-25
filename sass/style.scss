@@ -3,25 +3,31 @@ Theme Name: MAAT - or the Improved Bootstrap
 Theme URI: http://github.com/asathoor
 Author: petj
 Author URI: http://multimusen.dk
-Description: testing bootstrap menu - skeleton theme
+Description: A skeleton theme. Prototype for a didactic theme for students. Features: Bootstrap and wp-navwalker menu. Next version costum header, costum background.
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: tribal
-Text Domain: petj_f16_bootstrap
+Tags: two-columns, blog, education, right-sidebar, grid-layout
+Text Domain: maat-or-the-improved-bootstrap
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 
-/* prepare */
-//@import "compass/reset";
+$left: 15px; // distance
+$respekt: 1.2rem; // respect distance
+$bg: #fff; // background
 
-$left: 15px;
-
+/**
+* Fonts
+*/
 @import url(https://fonts.googleapis.com/css?family=Courgette);
 
 //@import "bourbon";
+
+/**
+* Mixin Gradients
+*/
 
 @mixin sandGradient {
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f6e6b4+0,ed9017+100;Yellow+3D+%231 */
@@ -46,15 +52,21 @@ $left: 15px;
 	background: -webkit-linear-gradient(top,  #f2f5f6 0%,#e3eaed 37%,#c8d7dc 100%); /* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(to bottom,  #f2f5f6 0%,#e3eaed 37%,#c8d7dc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f5f6', endColorstr='#c8d7dc',GradientType=0 ); /* IE6-9 */
-
 }
 
+/**
+* HTML Tags
+*/
 body {
-	@include sandGradient;
+	/*@include sandGradient;*/
 }
 
+
+/**
+* Header
+*/
 header {
-	height: 115px;
+	height: 120px;
 	
 	h1 {
 		font-family: 'Courgette', cursive;
@@ -62,22 +74,32 @@ header {
 		left: $left;
 	}
 	h2 {
-		font-famly: sans-serif;
-		font-size: small;	
+		font-famly: serif;
+    font-weight: bold;
+    font-size: small;
 		position: relative;
 		left: $left;
 		top: -20px;
 	}
 }
 
+/**
+* H-tags
+*/
 h1 #logo {
 	a {
 		color: #fff;	
 	}
 }
+
 #logoImg{
 	position: relative;
 	float: left;
+}
+
+/* other headers */
+h2, h3, h4, h5, h6 {
+  font-weight: bold;
 }
 
 footer {
@@ -88,17 +110,21 @@ footer {
 	@include border-radius(12px);
 }
 
-/* Responsive Header */
+/* Responsive Design */
 @media screen and (max-width: 360px) {
     header {
         h2 {
 				display: none;        
         }
     }
+    img {
+      max-width: 360px;
+      height: auto;
+    }
 }
 
 /* articles */
-$bg: #fff;
+
 
 .container {
 	background-color: $bg;
@@ -119,4 +145,78 @@ aside {
 html {
 	//position: relative;
 	//top: -50px;
+}
+
+/**
+*    After theme check
+**/
+
+.wp-caption {
+    font-family: sans-serif;
+    }
+
+.wp-caption-text {
+    font-family: sans-serif;
+    }
+
+.screen-reader-text {
+    font-size: large;
+    }
+
+.gallery-caption {
+    font-size: small;
+    font-style: italic;
+    }
+
+.bypostauthor {
+    font-size: small;
+    }
+
+.alignright {
+    text-align: right;
+}
+
+.alignleft {
+    text-align: left;
+    margin-right: $respekt;
+    margin-bottom: $respekt;
+}
+
+.aligncenter {
+    text-align: center;
+}
+
+.sticky {
+    font-family: sans-serif;
+    font-weight: bold;
+    background-color: yellow;
+    }
+
+/**
+* Images
+* They just have to behave ...
+**/
+
+// does not work on all resolutions
+img {
+  max-width: 700px;
+  height: auto;
+}
+// so: media queries needed
+
+/**
+* Responsive Web Designs
+**/
+
+/* iPhone 6 w=375px */
+
+/* iPhone 6 w=375px */
+
+/* Galaxt s5 w=360px */
+
+/* iPad w=768px */
+
+/* Alternative: use the Bootstrap breakpoints! */
+ul#menu-testing-menu {
+  border-bottom: 0px;
 }

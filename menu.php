@@ -1,7 +1,13 @@
+<?php
+/**
+ * The Menu
+ * @link: https://github.com/twittem/wp-bootstrap-navwalker
+*/
+?>
 
-	<!-- navigation -->	
-	
-		<nav class="navbar navbar-inverse">
+<!-- Navigation -->	
+
+		<nav class="navbar navbar">
 		  <div class="container-fluid">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
@@ -30,6 +36,10 @@
 				    );
 				?>
 			</div>
-		</nav>
+		</nav><!-- /navigation --> 
 
-	<!-- /navigation --> 
+<?php
+/**
+ * To change your menu style add Bootstrap nav class names to the menu_class declaration.
+*/
+?>

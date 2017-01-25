@@ -1,51 +1,122 @@
-<!-- the loop source: https://codex.wordpress.org/The_Loop -->
+<?php
+/**
+ * The Maat Loop
+ *
+ * @package WordPress
+ * @subpackage maat-or-the-improved-bootstrap
+ * @since 1.0
+ * @version 1.0
+ *
+ * It's a bit bloated. 
+ * Cut to pieces?
+ */
+?>
 
- <!-- Start the Loop. -->
- <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+<!-- begin main loop -->
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
- 	<!-- Test if the current post is in category 3. -->
- 	<!-- If it is, the div box is given the CSS class "post-cat-three". -->
- 	<!-- Otherwise, the div box is given the CSS class "post". -->
+<article id="post-<?php the_ID(); ?>" 
+  <?php if(is_category('featured')): ?>class="featured-post"
 
- 	<?php if ( in_category( '3' ) ) : ?>
- 		<div class="post-cat-three">
- 	<?php else : ?>
- 		<div class="post">
- 	<?php endif; ?>
+  <?php endif; ?>>
+  <a href="<?php the_permalink(); ?>" 
+    title="<?php the_title_attribute(); ?>">
+  	  <h3><?php the_title() ;?></h3>
+  </a>
+
+  <p class="theAuthor"><em>
+    <?php the_author(); ?></em>
+  </p>
+  <figure class="theAvatar">
+    <?php echo get_avatar($id); ?>
+  </figure>
+	<p>
+		Published on <?php the_time('M j, Y'); ?> 
+		by <?php the_category(', '); ?>
+		in <?php the_category(', '); ?>
+	</p>
+  <div class="navLinks">
+    <?php posts_nav_link(); ?>
+  </div>
+ 
+  <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	  <?php the_content(); ?>
+  </div>
+  <aside class="tags">
+    <?php the_tags(); ?>
+  </aside>
+
+	<div class="prev-next-links">
+		<ul>
+			<li><?php next_post_link(); ?></li>
+			<li><?php previous_post_link(); ?></li>
+		</ul>
+
+	</div>
+  
+  <!-- Comment stuff -->  
+  <aside id="comments" class="theCommentsHere">
+
+    <?php comments_template(); // query the comments template ?> 
+
+    <?php if ( is_singular() ) wp_enqueue_script( "comment-reply" ); ?>
+
+  <!-- comments loop -->
+  <?php  if ( have_comments() ) : ?>
+    <h4 id="comments"><?php comments_number('No Comments', 'One Comment', '% Comments' );?></h4>
+    <ul class="commentlist">
+	    <?php wp_list_comments(); ?></ul>
+    <div class="commentNavigation">
+    <div class="alignleft"><?php previous_comments_link() ?></div>
+    <div class="alignright"><?php next_comments_link() ?></div>
+    </div>
+    <?php // else : // this is displayed if there are no comments so far ?>
+	    <?php if ( comments_open() ) :
+		    // If comments are open, but there are no comments.
+        echo __e("No comments. Yet. Be the first to add one.", "maat-or-the-improved-bootstrap");
+	    else : // comments are closed
+        echo __e("The comments are closed.", "maat-or-the-improved-bootstrap");
+	    endif;
+    endif;
+    ?>
+      <!-- comment add -->
+  <div id="commentForm">
+	    <?php comment_form(); ?>
+  </div>
+
+  <h5 id="theComments"> <?php _e("Comments", "maat-or-the-improved-bootstrap"); ?> </h5>
+
+  <!-- comments -->
+<?php 
+
+$args = array(
+	'base'               => '%_%',
+	'format'             => '?paged=%#%',
+	'total'              => 1,
+	'current'            => 0,
+	'show_all'           => false,
+	'end_size'           => 1,
+	'mid_size'           => 2,
+	'prev_next'          => true,
+	'prev_text'          => __('Previous', "maat-or-the-improved-bootstrap"),
+	'next_text'          => __('Next', "maat-or-the-improved-bootstrap"),
+	'type'               => 'plain',
+	'add_args'           => false,
+	'add_fragment'       => '',
+	'before_page_number' => '',
+	'after_page_number'  => ''
+); 
+
+?>
+
+  
+  </aside><!-- .theCommentsHere -->
 
 
- 	<!-- Display the Title as a link to the Post's permalink. -->
+</article>
 
- 	<h2><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+<?php endwhile; else: ?>
 
+	<p>Sorry, this post does not exist</p>
 
- 	<!-- Display the date (November 16th, 2009 format) and a link to other posts by this posts author. -->
-
- 	<small><?php the_time('F jS, Y'); ?> by <?php the_author_posts_link(); ?></small>
-
-
- 	<!-- Display the Post's content in a div box. -->
-
- 	<div class="entry">
- 		<?php the_content(); ?>
- 	</div>
-
-
- 	<!-- Display a comma separated list of the Post's Categories. -->
-
- 	<p class="postmetadata"><?php _e( 'Posted in' ); ?> <?php the_category( ', ' ); ?></p>
- 	</div> <!-- closes the first div box -->
-
-
- 	<!-- Stop The Loop (but note the "else:" - see next line). -->
-
- <?php endwhile; else : ?>
-
-
- 	<!-- The very first "if" tested to see if there were any Posts to -->
- 	<!-- display.  This "else" part tells what do if there weren't any. -->
- 	<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
-
-
- 	<!-- REALLY stop The Loop. -->
- <?php endif; ?>
+<?php endif; ?><!-- end loop -->
