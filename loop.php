@@ -15,7 +15,7 @@
 <!-- begin main loop -->
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-<article id="post-<?php the_ID(); ?>" 
+<article id="article-<?php the_ID(); ?>" 
   <?php if(is_category('featured')): ?>class="featured-post"
 
   <?php endif; ?>>
@@ -55,7 +55,7 @@
 	</div>
   
   <!-- Comment stuff -->  
-  <aside id="comments" class="theCommentsHere">
+  <aside class="theCommentsHere">
 
     <?php comments_template(); // query the comments template ?> 
 
@@ -63,7 +63,7 @@
 
   <!-- comments loop -->
   <?php  if ( have_comments() ) : ?>
-    <h4 id="comments"><?php comments_number('No Comments', 'One Comment', '% Comments' );?></h4>
+    <h4><?php comments_number('No Comments', 'One Comment', '% Comments' );?></h4>
     <ul class="commentlist">
 	    <?php wp_list_comments(); ?></ul>
     <div class="commentNavigation">
@@ -80,11 +80,11 @@
     endif;
     ?>
       <!-- comment add -->
-  <div id="commentForm">
+  <div class="addCommentsForm">
 	    <?php comment_form(); ?>
   </div>
 
-  <h5 id="theComments"> <?php _e("Comments", "maat-or-the-improved-bootstrap"); ?> </h5>
+  <h5> <?php _e("Comments", "maat-or-the-improved-bootstrap"); ?> </h5>
 
   <!-- comments -->
 <?php 

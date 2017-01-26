@@ -1,12 +1,12 @@
 /*!
-Theme Name: MAAT - or the Improved Bootstrap
-Theme URI: http://github.com/asathoor
-Author: petj
+Theme Name: MAAT
+Theme URI: https://github.com/asathoor/maat_bower_wp_theme
+Author: Per Thykjaer Jensen
 Author URI: http://multimusen.dk
-Description: A skeleton theme. Prototype for a didactic theme for students. Features: Bootstrap and wp-navwalker menu. Next version costum header, costum background.
+Description: A skeleton theme. Features: Bootstrap, Jquery and wp-navwalker menu.
 Version: 1.0
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License: GNU General Public License v3
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: two-columns, blog, education, right-sidebar, grid-layout
 Text Domain: maat-or-the-improved-bootstrap
 
@@ -14,21 +14,21 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 /**
-* Fonts
-*/
+ * Fonts
+ */
 @import url(https://fonts.googleapis.com/css?family=Courgette);
 /**
-* Mixin Gradients
-*/
+ * Mixin Gradients
+ */
 /**
-* HTML Tags
-*/
+ * HTML Tags
+ */
 body {
   /*@include sandGradient;*/ }
 
 /**
-* Header
-*/
+ * Header
+ */
 header {
   height: 120px; }
   header h1 {
@@ -36,20 +36,16 @@ header {
     position: relative;
     left: 15px; }
   header h2 {
-    font-famly: serif;
+    font-family: serif;
     font-weight: bold;
     font-size: small;
     position: relative;
     left: 15px;
     top: -20px; }
 
-nav {
-  position: fixed;
-  z-index: 100; }
-
 /**
-* H-tags
-*/
+ * H-tags
+ */
 h1 #logo a {
   color: #fff; }
 
@@ -136,22 +132,15 @@ aside {
   background-color: yellow; }
 
 /**
-* Images
-* They just have to behave ...
-**/
+ * Images
+ * They just have to behave ...
+*/
 img {
-  max-width: 700px;
+  max-width: 320px;
   height: auto; }
 
 /**
-* Responsive Web Designs
-**/
-/* iPhone 6 w=375px */
-/* iPhone 6 w=375px */
-/* Galaxt s5 w=360px */
-/* iPad w=768px */
-/* Alternative: use the Bootstrap breakpoints! */
-ul#menu-testing-menu {
-  border-bottom: 0px; }
+ * Bootstrap Breakpoints
+ **/
 
 /*# sourceMappingURL=style.css.map */
