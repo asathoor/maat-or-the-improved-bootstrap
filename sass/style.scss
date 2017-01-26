@@ -81,6 +81,12 @@ header {
 		left: $left;
 		top: -20px;
 	}
+	img {
+		position: relative; 
+		float: left;
+		margin-left: 1.333em;
+		margin-right: 1.333em;
+	}
 }
 
 /**
@@ -189,7 +195,7 @@ html {
 .sticky {
     font-family: sans-serif;
     font-weight: bold;
-    background-color: yellow;
+    background-color: silver;
     }
 
 /**
@@ -198,13 +204,15 @@ html {
 */
 
 // does not work on all resolutions
+
 img {
 	max-width: 320px;
 	height: auto;
 }
+
 // so: media queries needed
 
 /**
- * Bootstrap Breakpoints
+ * Breakpoints
  **/
 

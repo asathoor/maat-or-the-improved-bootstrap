@@ -42,6 +42,11 @@ header {
     position: relative;
     left: 15px;
     top: -20px; }
+  header img {
+    position: relative;
+    float: left;
+    margin-left: 1.333em;
+    margin-right: 1.333em; }
 
 /**
  * H-tags
@@ -129,7 +134,7 @@ aside {
 .sticky {
   font-family: sans-serif;
   font-weight: bold;
-  background-color: yellow; }
+  background-color: silver; }
 
 /**
  * Images
@@ -140,7 +145,7 @@ img {
   height: auto; }
 
 /**
- * Bootstrap Breakpoints
+ * Breakpoints
  **/
 
 /*# sourceMappingURL=style.css.map */

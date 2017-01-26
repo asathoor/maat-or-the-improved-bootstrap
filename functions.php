@@ -115,4 +115,16 @@ add_editor_style();
  * Post thumbnails
  **/
 add_theme_support( "post-thumbnails" );
+
+/**
+ * Costum header image
+ * (the handbook sample sucks ... @link: https://developer.wordpress.org/themes/functionality/custom-headers/)
+ * (trying: codex @link: https://codex.wordpress.org/Custom_Headers)
+ **/
+$args = array(
+	'width'         => 100,
+	'height'        => 113,
+	'default-image' => get_template_directory_uri() . '/images/maat_100x.png',
+);
+add_theme_support( 'custom-header', $args );
 ?>
