@@ -17,4 +17,3 @@ The Bower files are ignored via .gitignore. Install them this way:
 # will install dependencies
 bower install
 ~~~~
-
