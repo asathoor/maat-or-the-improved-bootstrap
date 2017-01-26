@@ -39,13 +39,11 @@
 
 </head>
 <body <?php body_class(); ?>>
+
 	<header>
 		<section>
 			<a href="<?php echo home_url(); ?>">
-				<img 
-          src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/images/maat_100x.png" 
-          alt="Logo: <?php echo get_bloginfo('name'); ?>" 
-          id="logoImg">
+				<img alt="" src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>">
 			</a>
 			<a href="<?php echo home_url(); ?>">
 				<h1 id="logo"> <?php echo get_bloginfo('name'); ?> </h1>
