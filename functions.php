@@ -136,4 +136,13 @@ $args = array(
 	'default-image' => get_template_directory_uri() . '/images/maat_100x.png',
 );
 add_theme_support( 'custom-header', $args );
+
+/**
+ * Costum background
+ */
+$args = array(
+	'default-color' => '000000',
+	'default-image' => '%1$s/images/background.jpg',
+);
+add_theme_support( 'custom-background', $args );
 ?>
