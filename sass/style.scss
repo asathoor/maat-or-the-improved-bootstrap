@@ -26,9 +26,8 @@ $bg: #fff; // background
 //@import "bourbon";
 
 /**
- * Mixin Gradients
+ * Some mixins ...
  */
-
 @mixin sandGradient {
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f6e6b4+0,ed9017+100;Yellow+3D+%231 */
 	background: #f6e6b4; /* Old browsers */
@@ -57,15 +56,12 @@ $bg: #fff; // background
 /**
  * HTML Tags
  */
-body {
-	/*@include sandGradient;*/
-}
-
 
 /**
  * Header
  */
 header {
+
 	height: 120px;
 	
 	h1 {
@@ -73,6 +69,7 @@ header {
 		position: relative;
 		left: $left;
 	}
+
 	h2 {
 		font-family: serif;
 		font-weight: bold;
@@ -81,11 +78,13 @@ header {
 		left: $left;
 		top: -20px;
 	}
+
 	img {
 		position: relative; 
 		float: left;
 		margin-left: 1.333em;
 		margin-right: 1.333em;
+		top: -13px;
 	}
 }
 
@@ -103,11 +102,6 @@ h1 #logo {
 	float: left;
 }
 
-/* other headers */
-h2, h3, h4, h5, h6 {
-  font-weight: bold;
-}
-
 footer {
 	color: #fff;
 	background-color: #000;
@@ -116,53 +110,31 @@ footer {
 	@include border-radius(12px);
 }
 
-/* Responsive Design */
-@media screen and (max-width: 360px) {
-    header {
-        h2 {
-				display: none;        
-        }
-    }
-    img {
-      max-width: 360px;
-      height: auto;
-    }
+
+/**
+ * Article
+ */
+article {
+	margin-top: 4rem;
+	margin-bottom: 6rem;
+	background-color: $bg;
 }
-
-/* articles */
-
 
 .container {
 	background-color: $bg;
-	@include border-radius(12px);
 }
 
-
-aside, article {
-	background-color: $bg;
-	@include border-radius(12px);
-}
-
-aside {
-	@include border-radius(5px);
-	//@include blue-shade();
-}
-
-html {
-	//position: relative;
-	//top: -50px;
-}
 
 /**
-*    After theme check
-**/
-
+ * WP standard classes
+ */
 .wp-caption {
     font-family: sans-serif;
     }
 
 .wp-caption-text {
     font-family: sans-serif;
+		font-style: italic;
     }
 
 .screen-reader-text {
@@ -170,8 +142,7 @@ html {
     }
 
 .gallery-caption {
-    font-size: small;
-    font-style: italic;
+     font-style: italic;
     }
 
 .bypostauthor {
@@ -195,7 +166,6 @@ html {
 .sticky {
     font-family: sans-serif;
     font-weight: bold;
-    background-color: silver;
     }
 
 /**
@@ -211,10 +181,3 @@ img {
 }
 
 /* @link: https://codex.wordpress.org/Content_Width */
-
-// so: media queries needed
-
-/**
- * Breakpoints
- **/
-

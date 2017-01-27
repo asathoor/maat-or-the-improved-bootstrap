@@ -73,9 +73,9 @@
     <?php // else : // this is displayed if there are no comments so far ?>
 	    <?php if ( comments_open() ) :
 		    // If comments are open, but there are no comments.
-        echo __e("No comments. Yet. Be the first to add one.", "maat-or-the-improved-bootstrap");
+        _e("No comments. Yet. Be the first to add one.", "maat-or-the-improved-bootstrap");
 	    else : // comments are closed
-        echo __e("The comments are closed.", "maat-or-the-improved-bootstrap");
+        _e("The comments are closed.", "maat-or-the-improved-bootstrap");
 	    endif;
     endif;
     ?>
