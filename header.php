@@ -43,12 +43,13 @@
 	<header>
 		<section>
 			<a href="<?php echo home_url(); ?>">
-				<img alt="" src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>">
-			</a>
-			<a href="<?php echo home_url(); ?>">
+				<img 
+          alt="" src="<?php header_image(); ?>" 
+          width="<?php echo get_custom_header()->width; ?>" 
+          height="<?php echo get_custom_header()->height; ?>">
+      </a>
 				<h1 id="logo"> <?php echo get_bloginfo('name'); ?> </h1>
 				<h2 id="description"> <?php echo get_bloginfo('description'); ?> </h2>
-			</a>
 		</section>
 	</header>
 

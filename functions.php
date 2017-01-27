@@ -10,15 +10,6 @@
  */
 
 /**
- * Themename as global
- */
-function themeName() {
-    global $maat;
-    $maat = 'maat-or-the-improved-bootstrap';
-}
-add_action( 'after_theme_setup', 'themeName' );
-
-/**
  * Stylesheets
  */
 function themeslug_enqueue_style() {
@@ -32,6 +23,12 @@ function themeslug_enqueue_style() {
     false );
 }
 add_action( 'wp_enqueue_scripts', 'themeslug_enqueue_style' );
+
+/**
+ * Remove the WP jquery version
+ * (avoid conflicts)
+ */
+wp_deregister_script( 'jquery' );
 
 /**
  * JavaScripts, Jquery, Bootsrrap.js, etc.
@@ -131,6 +128,7 @@ add_theme_support( "post-thumbnails" );
  * (trying: codex @link: https://codex.wordpress.org/Custom_Headers)
  **/
 $args = array(
+  'default-text-color'  => '000000',
 	'width'         => 100,
 	'height'        => 113,
 	'default-image' => get_template_directory_uri() . '/images/maat_100x.png',
