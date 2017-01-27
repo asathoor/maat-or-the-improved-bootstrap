@@ -18,14 +18,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
  */
 @import url(https://fonts.googleapis.com/css?family=Courgette);
 /**
- * Mixin Gradients
+ * Some mixins ...
  */
 /**
  * HTML Tags
  */
-body {
-  /*@include sandGradient;*/ }
-
 /**
  * Header
  */
@@ -46,7 +43,8 @@ header {
     position: relative;
     float: left;
     margin-left: 1.333em;
-    margin-right: 1.333em; }
+    margin-right: 1.333em;
+    top: -13px; }
 
 /**
  * H-tags
@@ -58,10 +56,6 @@ h1 #logo a {
   position: relative;
   float: left; }
 
-/* other headers */
-h2, h3, h4, h5, h6 {
-  font-weight: bold; }
-
 footer {
   color: #fff;
   background-color: #000;
@@ -72,49 +66,31 @@ footer {
   -ms-border-radius: 12px;
   border-radius: 12px; }
 
-/* Responsive Design */
-@media screen and (max-width: 360px) {
-  header h2 {
-    display: none; }
+/**
+ * Article
+ */
+article {
+  margin-top: 4rem;
+  margin-bottom: 6rem;
+  background-color: #fff; }
 
-  img {
-    max-width: 360px;
-    height: auto; } }
-/* articles */
 .container {
-  background-color: #fff;
-  -webkit-border-radius: 12px;
-  -moz-border-radius: 12px;
-  -ms-border-radius: 12px;
-  border-radius: 12px; }
-
-aside, article {
-  background-color: #fff;
-  -webkit-border-radius: 12px;
-  -moz-border-radius: 12px;
-  -ms-border-radius: 12px;
-  border-radius: 12px; }
-
-aside {
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  border-radius: 5px; }
+  background-color: #fff; }
 
 /**
-*    After theme check
-**/
+ * WP standard classes
+ */
 .wp-caption {
   font-family: sans-serif; }
 
 .wp-caption-text {
-  font-family: sans-serif; }
+  font-family: sans-serif;
+  font-style: italic; }
 
 .screen-reader-text {
   font-size: large; }
 
 .gallery-caption {
-  font-size: small;
   font-style: italic; }
 
 .bypostauthor {
@@ -133,8 +109,7 @@ aside {
 
 .sticky {
   font-family: sans-serif;
-  font-weight: bold;
-  background-color: silver; }
+  font-weight: bold; }
 
 /**
  * Images
@@ -144,8 +119,6 @@ img {
   max-width: 320px;
   height: auto; }
 
-/**
- * Breakpoints
- **/
+/* @link: https://codex.wordpress.org/Content_Width */
 
 /*# sourceMappingURL=style.css.map */

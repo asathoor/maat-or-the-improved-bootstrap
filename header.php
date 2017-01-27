@@ -40,19 +40,25 @@
 </head>
 <body <?php body_class(); ?>>
 
-	<header>
-		<section>
-			<a href="<?php echo home_url(); ?>">
-				<img 
-          alt="" src="<?php header_image(); ?>" 
-          width="<?php echo get_custom_header()->width; ?>" 
-          height="<?php echo get_custom_header()->height; ?>">
-      </a>
-				<h1 id="logo"> <?php echo get_bloginfo('name'); ?> </h1>
-				<h2 id="description"> <?php echo get_bloginfo('description'); ?> </h2>
-		</section>
-	</header>
-
-<?php get_template_part("menu"); // get the menu ?>
+<div class="container">
+  <div class="row">
+		<header class="col-lg-12 col-md-12 col-xs-12">
+			<section>
+				<a href="<?php echo home_url(); ?>">
+					<img 
+		        alt="" src="<?php header_image(); ?>" 
+		        width="<?php echo get_custom_header()->width; ?>" 
+		        height="<?php echo get_custom_header()->height; ?>">
+		    </a>
+					<h1 id="logo"> <?php echo get_bloginfo('name'); ?></h1>
+					<h2 id="description"><?php echo get_bloginfo('description'); ?></h2>
+			</section>
+		</header>
+	</div>
+	<div class="row">
+		<div class="col-lg-12 col-md-12 col-xs-12">
+			<?php get_template_part("menu"); // get the menu ?>
+		</div>
+	</div>
 
 <!-- /header.php -->
