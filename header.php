@@ -16,7 +16,6 @@
 <html <?php language_attributes(); ?> >
 <head>
 	
-
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="generator" content="Bluefish 2.2.5" >
 
@@ -49,9 +48,10 @@
 		        alt="" src="<?php header_image(); ?>" 
 		        width="<?php echo get_custom_header()->width; ?>" 
 		        height="<?php echo get_custom_header()->height; ?>">
-		    </a>
+
 					<h1 id="logo"> <?php echo get_bloginfo('name'); ?></h1>
 					<h2 id="description"><?php echo get_bloginfo('description'); ?></h2>
+				</a><!-- all link to home -->
 			</section>
 		</header>
 	</div>
