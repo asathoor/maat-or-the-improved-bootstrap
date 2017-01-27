@@ -81,37 +81,11 @@
     ?>
       <!-- comment add -->
   <div class="addCommentsForm">
-	    <?php comment_form(); ?>
+	    <?php // comment_form(); ?>
   </div>
 
   <h5> <?php _e("Comments", "maat-or-the-improved-bootstrap"); ?> </h5>
-
-  <!-- comments -->
-<?php 
-
-$args = array(
-	'base'               => '%_%',
-	'format'             => '?paged=%#%',
-	'total'              => 1,
-	'current'            => 0,
-	'show_all'           => false,
-	'end_size'           => 1,
-	'mid_size'           => 2,
-	'prev_next'          => true,
-	'prev_text'          => __('Previous', "maat-or-the-improved-bootstrap"),
-	'next_text'          => __('Next', "maat-or-the-improved-bootstrap"),
-	'type'               => 'plain',
-	'add_args'           => false,
-	'add_fragment'       => '',
-	'before_page_number' => '',
-	'after_page_number'  => ''
-); 
-
-?>
-
-  
-  </aside><!-- .theCommentsHere -->
-
+</aside><!-- .theCommentsHere -->
 
 </article>
 
