@@ -1,6 +1,6 @@
 <?php
 /**
- * page
+ * Page: display a page
  *
  * @package WordPress
  * @subpackage maat-or-the-improved-bootstrap
@@ -14,7 +14,7 @@
 <?php get_header(); ?>
 
 <!-- file: page.php -->
-<div id="page" class="container">
+<!-- div id="page" class="container" -->
   <div class="row">
     <div id="text" class="col-lg-12">
       <?php get_template_part('loop'); // the main loop ?>

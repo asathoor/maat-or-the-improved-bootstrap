@@ -14,14 +14,16 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 /**
+ * Vars
+ */
+/**
  * Fonts
+ * Google fonts are ok via uri
+ * Other fonts should be included 
  */
 @import url(https://fonts.googleapis.com/css?family=Courgette);
 /**
- * Some mixins ...
- */
-/**
- * HTML Tags
+ * Rounded corners
  */
 /**
  * Header
@@ -33,7 +35,7 @@ header {
     position: relative;
     left: 15px; }
   header h2 {
-    font-family: serif;
+    font-family: sans-serif;
     font-weight: bold;
     font-size: small;
     position: relative;
@@ -46,25 +48,17 @@ header {
     margin-right: 1.333em;
     top: -13px; }
 
-/**
- * H-tags
- */
-h1 #logo a {
-  color: #fff; }
-
-#logoImg {
-  position: relative;
-  float: left; }
-
+/*
+#logoImg{
+	position: relative;
+	float: left;
+}
+*/
 footer {
   color: #fff;
   background-color: #000;
   padding: 2em;
-  font-size: x-small;
-  -webkit-border-radius: 12px;
-  -moz-border-radius: 12px;
-  -ms-border-radius: 12px;
-  border-radius: 12px; }
+  font-size: x-small; }
 
 /**
  * Article
@@ -74,12 +68,12 @@ article {
   margin-bottom: 6rem;
   background-color: #fff; }
 
+/**
+ * WP required classes
+ */
 .container {
   background-color: #fff; }
 
-/**
- * WP standard classes
- */
 .wp-caption {
   font-family: sans-serif; }
 
@@ -110,14 +104,6 @@ article {
 .sticky {
   font-family: sans-serif;
   font-weight: bold; }
-
-/**
- * Images
- * They just have to behave ...
-*/
-img {
-  max-width: 320px;
-  height: auto; }
 
 /* @link: https://codex.wordpress.org/Content_Width */
 

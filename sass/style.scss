@@ -14,29 +14,24 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 
+/**
+ * Vars
+ */
 $left: 15px; // distance
 $respekt: 1.2rem; // respect distance
 $bg: #fff; // background
 
 /**
  * Fonts
+ * Google fonts are ok via uri
+ * Other fonts should be included 
  */
 @import url(https://fonts.googleapis.com/css?family=Courgette);
 
-//@import "bourbon";
 
 /**
- * Some mixins ...
+ * Rounded corners
  */
-@mixin sandGradient {
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f6e6b4+0,ed9017+100;Yellow+3D+%231 */
-	background: #f6e6b4; /* Old browsers */
-	background: -moz-linear-gradient(top,  #f6e6b4 0%, #ed9017 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(top,  #f6e6b4 0%,#ed9017 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom,  #f6e6b4 0%,#ed9017 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6e6b4', endColorstr='#ed9017',GradientType=0 ); /* IE6-9 */
-}
-
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
      -moz-border-radius: $radius;
@@ -44,18 +39,6 @@ $bg: #fff; // background
           border-radius: $radius;
 }
 
-@mixin blue-shade(){
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f2f5f6+0,e3eaed+37,c8d7dc+100;Grey+3D+%234 */
-	background: #f2f5f6; /* Old browsers */
-	background: -moz-linear-gradient(top,  #f2f5f6 0%, #e3eaed 37%, #c8d7dc 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(top,  #f2f5f6 0%,#e3eaed 37%,#c8d7dc 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom,  #f2f5f6 0%,#e3eaed 37%,#c8d7dc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f5f6', endColorstr='#c8d7dc',GradientType=0 ); /* IE6-9 */
-}
-
-/**
- * HTML Tags
- */
 
 /**
  * Header
@@ -71,7 +54,7 @@ header {
 	}
 
 	h2 {
-		font-family: serif;
+		font-family: sans-serif;
 		font-weight: bold;
 		font-size: small;
 		position: relative;
@@ -88,26 +71,19 @@ header {
 	}
 }
 
-/**
- * H-tags
- */
-h1 #logo {
-	a {
-		color: #fff;	
-	}
-}
-
+/*
 #logoImg{
 	position: relative;
 	float: left;
 }
+*/
 
 footer {
 	color: #fff;
 	background-color: #000;
 	padding: 2em;
 	font-size: x-small;
-	@include border-radius(12px);
+	//@include border-radius(12px);
 }
 
 
@@ -120,14 +96,14 @@ article {
 	background-color: $bg;
 }
 
+
+/**
+ * WP required classes
+ */
 .container {
 	background-color: $bg;
 }
 
-
-/**
- * WP standard classes
- */
 .wp-caption {
     font-family: sans-serif;
     }
@@ -167,17 +143,5 @@ article {
     font-family: sans-serif;
     font-weight: bold;
     }
-
-/**
- * Images
- * They just have to behave ...
-*/
-
-// does not work on all resolutions
-
-img {
-	max-width: 320px;
-	height: auto;
-}
 
 /* @link: https://codex.wordpress.org/Content_Width */
