@@ -138,7 +138,7 @@ $args = array(
 add_theme_support( 'custom-header', $args );
 
 /**
- * Costum background
+ * Costum background or image
  */
 $args = array(
 	'default-color' => '000000',
