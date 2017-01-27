@@ -10,6 +10,15 @@
  */
 
 /**
+ * Themename as global
+ */
+function themeName() {
+    global $maat;
+    $maat = 'maat-or-the-improved-bootstrap';
+}
+add_action( 'after_theme_setup', 'themeName' );
+
+/**
  * Stylesheets
  */
 function themeslug_enqueue_style() {
