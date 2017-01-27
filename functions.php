@@ -110,7 +110,7 @@ wp_link_pages( $defaults );
 /**
  * Set Content width
  */
-if ( ! isset( $content_width ) ) $content_width = 900;
+if ( ! isset( $content_width ) ) $content_width = 600;
 
 /**
  * Editor styles

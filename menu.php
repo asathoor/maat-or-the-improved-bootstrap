@@ -1,11 +1,17 @@
 <?php
 /**
- * The Menu
- * @link: https://github.com/twittem/wp-bootstrap-navwalker
-*/
+ * The Improved Bootstrap Menu
+ *
+ * @link https://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package WordPress
+ * @subpackage maat-or-the-improved-bootstrap
+ * @since 1.0
+ * @version 1.0
+ */
 ?>
 
-<!-- Navigation -->	
+<!-- Bootstrap Menu -->	
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
