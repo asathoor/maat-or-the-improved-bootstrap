@@ -14,17 +14,11 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 /**
- * Vars
- */
-/**
  * Fonts
  * Google fonts are ok via uri
- * Other fonts should be included 
+ * Other fonts should be included in a dir.
  */
 @import url(https://fonts.googleapis.com/css?family=Courgette);
-/**
- * Rounded corners
- */
 /**
  * Header
  */
@@ -48,12 +42,6 @@ header {
     margin-right: 1.333em;
     top: -13px; }
 
-/*
-#logoImg{
-	position: relative;
-	float: left;
-}
-*/
 footer {
   color: #fff;
   background-color: #000;
@@ -104,7 +92,5 @@ article {
 .sticky {
   font-family: sans-serif;
   font-weight: bold; }
-
-/* @link: https://codex.wordpress.org/Content_Width */
 
 /*# sourceMappingURL=style.css.map */
