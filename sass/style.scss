@@ -14,9 +14,7 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 
-/**
- * Vars
- */
+// vars
 $left: 15px; // distance
 $respekt: 1.2rem; // respect distance
 $bg: #fff; // background
@@ -24,14 +22,12 @@ $bg: #fff; // background
 /**
  * Fonts
  * Google fonts are ok via uri
- * Other fonts should be included 
+ * Other fonts should be included in a dir.
  */
 @import url(https://fonts.googleapis.com/css?family=Courgette);
 
 
-/**
- * Rounded corners
- */
+// Rounded corners
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
      -moz-border-radius: $radius;
@@ -71,12 +67,6 @@ header {
 	}
 }
 
-/*
-#logoImg{
-	position: relative;
-	float: left;
-}
-*/
 
 footer {
 	color: #fff;
@@ -144,4 +134,4 @@ article {
     font-weight: bold;
     }
 
-/* @link: https://codex.wordpress.org/Content_Width */
+// @link: https://codex.wordpress.org/Content_Width
