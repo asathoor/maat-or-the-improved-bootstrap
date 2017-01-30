@@ -42,9 +42,20 @@
   <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	  <?php the_content(); ?>
   </div>
+
+<!-- comments -->
+
+  <?php comments_template(); ?>
+
+<!-- /comments -->
+
+
+
+<!-- tags -->
   <aside class="tags">
     <?php the_tags(); ?>
   </aside>
+<!-- /tags -->
 
 	<div class="prev-next-links">
 		<ul>
@@ -54,37 +65,6 @@
 
 	</div>
   
-  <!-- Comment stuff -->  
-  <aside class="theCommentsHere">
-
-    <?php comments_template(); // query the comments template ?> 
-
-    <?php if ( is_singular() ) wp_enqueue_script( "comment-reply" ); ?>
-
-  <!-- comments loop -->
-  <?php  if ( have_comments() ) : ?>
-    <h4><?php comments_number('No Comments', 'One Comment', '% Comments' );?></h4>
-    <ul class="commentlist">
-	    <?php wp_list_comments(); ?></ul>
-    <div class="commentNavigation">
-    <div class="alignleft"><?php previous_comments_link() ?></div>
-    <div class="alignright"><?php next_comments_link() ?></div>
-    </div>
-    <?php // else : // this is displayed if there are no comments so far ?>
-	    <?php if ( comments_open() ) :
-		    // If comments are open, but there are no comments.
-        _e("No comments. Yet. Be the first to add one.", "maat-or-the-improved-bootstrap");
-	    else : // comments are closed
-        _e("The comments are closed.", "maat-or-the-improved-bootstrap");
-	    endif;
-    endif;
-    ?>
-      <!-- comment add -->
-  <div class="addCommentsForm">
-	    <?php // comment_form(); ?>
-  </div>
-
-  <h5> <?php _e("Comments", "maat-or-the-improved-bootstrap"); ?> </h5>
 </aside><!-- .theCommentsHere -->
 
 </article>

@@ -28,7 +28,8 @@ add_action( 'wp_enqueue_scripts', 'themeslug_enqueue_style' );
  * Remove the WP jquery version
  * (avoid conflicts)
  */
-wp_deregister_script( 'jquery' );
+// wp_deregister_script( 'jquery' );
+// not allowed, use Jquery in protected mode
 
 /**
  * JavaScripts, Jquery, Bootsrrap.js, etc.

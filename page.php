@@ -7,7 +7,7 @@
  * @since 1.0
  * @version 1.0
  * 
- * The page is full-width and does not use the sidebar.
+ * The page is full-width and no sidebar.
  */
 ?>
 
