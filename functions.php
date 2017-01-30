@@ -46,6 +46,7 @@ function wpdocs_maat_scripts() {
     wp_enqueue_script( 'html5-js', 
       get_template_directory_uri() 
       . '/js/html5.js');
+    wp_enqueue_script( 'comment-reply' );
 }
 add_action( 'wp_enqueue_scripts', 'wpdocs_maat_scripts' );
 
