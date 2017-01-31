@@ -15,7 +15,10 @@ The theme includes several libraries, such as:
 The Bower files are ignored via .gitignore. Install them this way:
 
 ~~~~
-# will install dependencies
+# 1) Install Nodejs depencencies
+npm install
+
+# 2) Install Bower dependencies
 bower install
 ~~~~
 
