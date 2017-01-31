@@ -1,10 +1,10 @@
 # The Maat Theme
 
-Maat is a WordPress Theme. The theme is inspried by the *WordCamp in Aarhus 2016*. 
-Several speakers mentioned tools such as SASS, Bower, Grunt and Eslint. 
-I had to try these tools in one theme. 
+Maat is an introduction to WordPress Themes and Nodejs workflows.
+The theme is inspried by several speakers at the *WordCamp in Aarhus 2016*. 
+They mentioned tools such as SASS, Bower, Grunt and Eslint. 
 
-* SASS / Compass
+* SASS 
 * Bower
 
 The theme includes several libraries, such as:
