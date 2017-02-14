@@ -6,15 +6,11 @@
  * @sub-package: maat-or-the-improved-bootstrap
  * 
  * Aquarelle Library Sample
-?>
-
-<?php
-/**
- * Enqueue additional scripts  
  */
 
 /*
-add this to functions.php: 
+
+---- add this to functions.php ( or create a plugin ) -----
 
 function petjmaatFpScripts() {
     wp_enqueue_script( 'three.js', get_template_directory_uri() . 'bower_components/three.js/build/three.js', array(), '1.0.0', true );
@@ -32,35 +28,42 @@ add_action( 'wp_enqueue_scripts', 'petjmaatFpScripts' );
 */
 ?>
 
+<aside>
+
 <H3>Aquarelle</H3>
+
 <p>Here's a JavaScript Plugin</p>
+
 <div id="animeret">
     <img class="aquarelleImg" src="<?php bloginfo('template_url')?>/images/multimusen.png"><!-- watercolor effect image -->
 </div>
+
 <h5>Specificaitons </h5>
+
 <ul>
     <li>Enqueue scripts (funcitons.php)</li>
     <li>Template parts (aquarelle.php)</li>
     <li>Use template parts (index.php)</li>
 </ul>
 
+</aside>
+    
 <!-- for the aquarelle animation -->
 <script>
     /**
-     * Billedet som skal manipuleres fra DOM
+     * The picture to be manipulated
      */
     var image = document.getElementsByTagName('img')[1]; // nb: address the correct image here ...
-    //var image = document.getElementsByClass('aquarelleImg')['0'];
 
     /**
-     * Billede og maske kombineres
+     * The image and the mask
      */
     var aquarelle = new Aquarelle( 
         '<?php bloginfo('template_url')?>/images/multimusen.png', 
         '<?php bloginfo('template_url')?>/images/mask.png', {
             autoplay: true,
             loop: false
-    }); // loop (false: holder op, true: looper)
+    }); // loop (false: will stop, true: won't stop)
 
     /**
      * Eventlistener
