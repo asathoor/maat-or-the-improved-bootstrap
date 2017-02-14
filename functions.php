@@ -37,16 +37,33 @@ add_action( 'wp_enqueue_scripts', 'themeslug_enqueue_style' );
 function wpdocs_maat_scripts() {
     wp_enqueue_script( 'Jquery', get_template_directory_uri() 
     . '/bower_components/jquery/dist/jquery.min.js');
+    
     wp_enqueue_script( 'Bootstrap-js', 
       get_template_directory_uri() 
       . '/bower_components/bootstrap/dist/js/bootstrap.min.js');
+    
     wp_enqueue_script( 'menu-js', 
       get_template_directory_uri() 
       . '/js/menu.js');
+    
     wp_enqueue_script( 'html5-js', 
       get_template_directory_uri() 
       . '/js/html5.js');
-    wp_enqueue_script( 'comment-reply' );
+    
+    //wp_enqueue_script( 'comment-reply' );
+    
+    /* Aquarelle scripts 
+     * ( front page animation )
+     */
+    wp_enqueue_script( 'three.js', get_template_directory_uri() . '/bower_components/three.js/build/three.js');
+    wp_enqueue_script( 'Aquarelle.js', get_template_directory_uri() . '/bower_components/aquarelle/Aquarelle.js');
+    wp_enqueue_script( 'EffectComposer.js', get_template_directory_uri() . '/bower_components/three.js/examples/js/postprocessing/EffectComposer.js');
+    wp_enqueue_script( 'ClearPass.js', get_template_directory_uri() . '/bower_components/three.js/examples/js/postprocessing/ClearPass.js');
+    wp_enqueue_script( 'AquarellePass.js', get_template_directory_uri() . '/bower_components/aquarelle/AquarellePass.js');
+    wp_enqueue_script( 'Shaderpass.js', get_template_directory_uri() . '/bower_components/three.js/examples/js/postprocessing/ShaderPass.js');
+    wp_enqueue_script( 'CopyShader.js', get_template_directory_uri() . '/bower_components/three.js/examples/js/shaders/CopyShader.js');
+    // the last one should be a local copy ...
+    wp_enqueue_script( 'GeomContour.js', 'https://bl.ocks.org/mbostock/raw/4241134/d3.geom.contour.min.js');    
 }
 add_action( 'wp_enqueue_scripts', 'wpdocs_maat_scripts' );
 
@@ -145,4 +162,6 @@ $args = array(
 	'default-image' => '%1$s/images/background.jpg',
 );
 add_theme_support( 'custom-background', $args );
+
+
 ?>
